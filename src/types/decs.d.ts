@@ -1,0 +1,1 @@
+// declare "d:/projects/client/node_modules/lucide-react/dist/lucide-react"

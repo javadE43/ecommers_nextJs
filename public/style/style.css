@@ -1,0 +1,20 @@
+@import url(./yekan.css);
+@import url(./doran.css);
+
+body {
+  direction: inherit;
+  /* background-color: #cdcdcd; */
+}
+
+.slider__container {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.slider__container::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+.slider__item {
+  scroll-snap-align: start;
+}
+

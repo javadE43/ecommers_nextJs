@@ -1,0 +1,86 @@
+@import url('../../public/style/style.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: var(--font-iranYekan), sans-serif;
+    box-sizing: border-box !important;
+    padding: 0;
+    margin: 0;
+}
+
+@layer base {
+    html {
+        direction: rtl;
+        color: #55555f;
+        height: 100%;
+    }
+    body {
+        @apply min-w-[320px] h-full scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-white;
+    }
+}
+
+.d__rtl {
+    direction: rtl !important;
+}
+
+.d__ltl {
+    direction: ltr !important;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    @apply !text-[10px] md:!text-[10px] lg:!text-[10px] xl:!text-[10px] text-gray-700;
+}
+.swiper-pagination-bullet-active {
+    @apply !bg-bg_base_red;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    @apply p-[1rem] md:p-[1rem];
+}
+/* CAROUSEL HOME PRODUCTS ONE START */
+.carousel_home_one > div.swiper-wrapper > :nth-child(2) > article {
+    @apply rounded-tr-lg rounded-br-lg;
+}
+.carousel_home_one > div.swiper-wrapper > :nth-last-child(1) > article {
+    @apply rounded-tl-lg rounded-bl-lg;
+}
+.carousel_home_one > .swiper-button-prev,
+.carousel_home_one > .swiper-button-next {
+    @apply bg-white rounded-full !text-[10px] md:!text-[10px] lg:!text-[10px] xl:!text-[10px] text-gray-700;
+}
+
+.carousel_home_one > .swiper-button-prev,
+.carousel_home_one > .swiper-button-next {
+    @apply w-12 h-12 p-[1rem] md:p-[1rem];
+}
+/* CAROUSEL HOME PRODUCTS ONE END */
+
+.one_navigation {
+    top: auto !important;
+    bottom: 20%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 50%;
+    color: black !important;
+}
+.one_navigation_prev {
+    top: auto !important;
+    right: 5% !important;
+    bottom: 10%;
+    background-color: white !important;
+    padding: 1rem;
+    border-radius: 50%;
+    color: black !important;
+}
+.one_navigation_next {
+    top: auto !important;
+    left: initial !important;
+    bottom: 10%;
+    background-color: white !important;
+    padding: 1rem;
+    border-radius: 50%;
+    color: black !important;
+}

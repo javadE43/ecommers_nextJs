@@ -1,0 +1,22 @@
+[
+    {
+        "id": "565656",
+        "title": "خانه",
+        "icone": "Home"
+    },
+    {
+        "id": "787878",
+        "title": "دسته بندی",
+        "icone": "LayoutGrid"
+    },
+    {
+        "id": "989898",
+        "title": "سبد خرید",
+        "icone": "ShoppingBag"
+    },
+    {
+        "id": "252525",
+        "title": "پروفایل",
+        "icone": "User"
+    }
+]
