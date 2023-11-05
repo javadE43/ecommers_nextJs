@@ -21,9 +21,7 @@ async function Home() {
                 className="@container flex flex-col w-full pb-[65px] lg:pb-[0] items-center overflow-hidden"
             >
                 {/* CAROUSEL HOME SATRT */}
-                <Suspense fallback={<h1 className="text-red-400 text-[4rem]">carouselHome suspense</h1>}>
-                    <CarouselHome />
-                </Suspense>
+                <CarouselHome />
 
                 {/* CAROUSEL HOME END */}
                 <div className="lg:container w-full flex flex-col !pr-[1rem] !pl-[1rem] gap-y-2 @8xl:w-11/12 @8xl:mx-auto">
@@ -32,11 +30,11 @@ async function Home() {
                     {/* CIRCEL CATEGORY END */}
 
                     {/* CAROUSEL PRODUCTS START */}
-                    {/* <CarouselProducts /> */}
+                    <CarouselProducts />
                     {/* CAROUSEL PRODUCTS END */}
 
                     {/* SECTION BETWEEN START */}
-                    {/* <SectionBetween /> */}
+                    <SectionBetween />
                     {/* SECTION BETWEEN END */}
 
                     {/* BANNER START */}
@@ -44,20 +42,20 @@ async function Home() {
                     {/* BANNER END */}
 
                     {/* CAROUSEL CATEGORY START */}
-                    {/* <CarouselCategory /> */}
+                    <CarouselCategory />
                     {/* CAROUSEL CATEGORY END */}
 
                     {/* BANNER START */}
-                    {/* <BannerTow /> */}
+                    <BannerTow />
                     {/* BANNER END */}
 
                     {/* CAROUSELBLOG START */}
-                    {/* <CarouselBlog /> */}
+                    <CarouselBlog />
                     {/* CAROUSELBLOG END */}
                 </div>
             </main>
             {/* FOOTER */}
-            <Suspense fallback={<h1 className="text-red-400 text-[4rem]">footer suspense</h1>}>
+            <Suspense fallback={<h1 className="text-red-400 text-sm">footer suspense</h1>}>
                 <Footer />
             </Suspense>
         </>

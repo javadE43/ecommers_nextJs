@@ -8,7 +8,7 @@ import React from 'react';
 import { variantParagraph } from '@/components/ui/pargraph';
 
 export default async function MenuFooterFixed() {
-    const data = await fetch('http://localhost:3000/api/footer/[slug]=mobile', { cache: 'no-store' });
+    const data = await fetch('http://localhost:3000/api/m', { cache: 'no-store' });
     const res: [] = await data.json();
     return (
         <>

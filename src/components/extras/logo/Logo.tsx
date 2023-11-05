@@ -9,7 +9,8 @@ export default function Logo() {
         <>
             {/* LOGO START */}
             <Link href="/" className="h-full text-inherit flex items-center">
-                <Icones.Logo />
+                {/* <Icones.Logo /> */}
+                <h1>LOGO</h1>
             </Link>
             {/* LOGO END */}
         </>

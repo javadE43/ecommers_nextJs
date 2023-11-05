@@ -20,26 +20,21 @@ interface ImgDataProps {
 }
 
 import { ContainerCaroselwiper } from '../../ui/container-carousel-swiper';
-
-const funcFetch = async (): Promise<ImgDataProps[]> => {
-    const data = await fetch(`${process.env.HOST_URL}/api/carousel_home`, { cache: 'no-store' });
-    const res = await data.json();
-    return res;
-};
+import { Skeleton, SkeletonLoader, SkeletonRectangle } from '@/components/ui/skeleton';
 
 export default function CarouselHome() {
     const [banners, setbanners] = useState<ImgDataProps[]>([]);
     useEffect(() => {
-        const res = async () => {
-            setbanners(await funcFetch());
-        };
-        res();
+        const data = fetch(`http://localhost:3000/api/carouselhome`, { cache: 'no-store' })
+            .then((res) => res.json())
+            .then((json) => {
+                setbanners(json);
+            });
     }, []);
-    console.log(banners);
+
     return (
         <>
-            <h1>home</h1>
-            {banners?.length > 0 && (
+            {banners?.length > 0 ? (
                 <div className="w-full @8xl:w-12/12 @8xl:mx-auto">
                     <ContainerCaroselwiper>
                         <Swiper
@@ -68,6 +63,20 @@ export default function CarouselHome() {
                         </Swiper>
                     </ContainerCaroselwiper>
                 </div>
+            ) : (
+                <>
+                    <div className="w-full @8xl:w-12/12 @8xl:mx-auto">
+                        <ContainerCaroselwiper>
+                            {/* <Swiper>
+                                <SwiperSlide>
+                                    <SkeletonLoader className="w-full">
+                                        <SkeletonRectangle height={300} className="bg-gray-200 rounded-md" />
+                                    </SkeletonLoader>
+                                </SwiperSlide>
+                            </Swiper> */}
+                        </ContainerCaroselwiper>
+                    </div>
+                </>
             )}
         </>
     );
